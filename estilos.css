@@ -1,0 +1,135 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos del header */
+header {
+    background-color: #f0f0f0;
+    height: 80px; /* Ajusta la altura del header */
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el logo y el menú */
+    height: 100%; /* Asegura que el nav ocupe toda la altura del header */
+}
+
+.header-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between; /* Espaciado entre logo y menú */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+.logo-container {
+    margin-left: -30px; /* Ajusta la posición del logo hacia la izquierda */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra los elementos de la lista */
+    flex-grow: 1; /* Permite que la lista ocupe el espacio disponible */
+}
+
+nav li {
+    margin: 0 15px; /* Ajusta el espacio entre elementos de la lista */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold; /* Aplica Roboto Bold a los enlaces */
+    text-transform: uppercase; /* Pone en mayúsculas los textos de navegación */
+}
+
+/* Estilo para el logo */
+.logo {
+    width: 90px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilos del main */
+main {
+    padding: 40px 0;
+}
+
+/* Estilos para la sección de planes */
+.planes {
+    padding: 40px 0;
+    background-color: #f9f9f9; /* Fondo claro */
+    text-align: center;
+}
+
+.planes h2 {
+    text-transform: uppercase; /* Pone en mayúsculas el título de la sección */
+}
+
+.planes .container {
+    display: flex; /* Flexbox para alinear los planes en una fila */
+    justify-content: center; /* Centra los planes horizontalmente */
+    flex-wrap: wrap; /* Permite que los planes se ajusten en varias líneas si es necesario */
+    gap: 20px; /* Espaciado entre planes */
+}
+
+.plan {
+    background-color: #fff; /* Fondo blanco para los planes */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    width: 220px; /* Ancho fijo para los planes */
+    height: 250px; /* Altura fija para los planes */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex; /* Flexbox para alinear el contenido */
+    flex-direction: column; /* Coloca los elementos en columna */
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+}
+
+.plan h3 {
+    margin-bottom: 10px; /* Espacio debajo del título */
+    text-transform: uppercase; /* Pone en mayúsculas el título del plan */
+}
+
+.plan p {
+    margin: 5px 0; /* Espacio entre párrafos */
+    text-transform: uppercase; /* Pone en mayúsculas el texto de los precios y MB */
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    text-transform: uppercase; /* Pone en mayúsculas el texto del footer */
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Apila los elementos de la lista en vertical */
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0; /* Ajusta el espacio entre elementos de la lista */
+    }
+
+    .productos .container {
+        flex-direction: column; /* Apila las cards de productos en vertical */
+        align-items: center;
+    }
+}
