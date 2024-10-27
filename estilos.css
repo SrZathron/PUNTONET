@@ -1,35 +1,43 @@
 /* Estilos generales */
-body {
-    font-family: 'Roboto', sans-serif;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 /* Estilos del header */
 header {
     background-color: #f0f0f0;
-    height: 80px; /* Ajusta la altura del header */
+    height: 80px;
 }
 
 nav {
     display: flex;
-    align-items: center; /* Alinea verticalmente el logo y el menú */
-    height: 100%; /* Asegura que el nav ocupe toda la altura del header */
+    align-items: center;
+    height: 100%;
 }
 
 .header-container {
     display: flex;
-    align-items: center; /* Alinea verticalmente */
-    justify-content: space-between; /* Espaciado entre logo y menú */
-    width: 100%; /* Asegura que ocupe todo el ancho */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .logo-container {
-    margin-left: -30px; /* Ajusta la posición del logo hacia la izquierda */
+    margin-left: -30px;
 }
 
 nav ul {
@@ -37,25 +45,24 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Centra los elementos de la lista */
-    flex-grow: 1; /* Permite que la lista ocupe el espacio disponible */
+    justify-content: center;
+    flex-grow: 1;
 }
 
 nav li {
-    margin: 0 15px; /* Ajusta el espacio entre elementos de la lista */
+    margin: 0 15px;
 }
 
 nav a {
     text-decoration: none;
     color: #333;
-    font-weight: bold; /* Aplica Roboto Bold a los enlaces */
-    text-transform: uppercase; /* Pone en mayúsculas los textos de navegación */
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-/* Estilo para el logo */
 .logo {
-    width: 90px; /* Ajusta el tamaño del logo */
-    height: auto; /* Mantiene la proporción de la imagen */
+    width: 90px;
+    height: auto;
 }
 
 /* Estilos del main */
@@ -63,46 +70,56 @@ main {
     padding: 40px 0;
 }
 
+.banner {
+    text-align: center;
+}
+
+.banner-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Estilos para la sección de planes */
 .planes {
     padding: 40px 0;
-    background-color: #f9f9f9; /* Fondo claro */
+    background-color: #f9f9f9;
     text-align: center;
 }
 
 .planes h2 {
-    text-transform: uppercase; /* Pone en mayúsculas el título de la sección */
+    text-transform: uppercase;
 }
 
 .planes .container {
-    display: flex; /* Flexbox para alinear los planes en una fila */
-    justify-content: center; /* Centra los planes horizontalmente */
-    flex-wrap: wrap; /* Permite que los planes se ajusten en varias líneas si es necesario */
-    gap: 20px; /* Espaciado entre planes */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .plan {
-    background-color: #fff; /* Fondo blanco para los planes */
-    border: 1px solid #ccc; /* Borde gris */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 20px; /* Espaciado interno */
-    width: 220px; /* Ancho fijo para los planes */
-    height: 250px; /* Altura fija para los planes */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    display: flex; /* Flexbox para alinear el contenido */
-    flex-direction: column; /* Coloca los elementos en columna */
-    justify-content: center; /* Centra verticalmente el contenido */
-    align-items: center; /* Centra horizontalmente el contenido */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 220px;
+    height: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .plan h3 {
-    margin-bottom: 10px; /* Espacio debajo del título */
-    text-transform: uppercase; /* Pone en mayúsculas el título del plan */
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .plan p {
-    margin: 5px 0; /* Espacio entre párrafos */
-    text-transform: uppercase; /* Pone en mayúsculas el texto de los precios y MB */
+    margin: 5px 0;
+    text-transform: uppercase;
 }
 
 /* Estilos del footer */
@@ -114,22 +131,22 @@ footer {
 }
 
 footer p {
-    text-transform: uppercase; /* Pone en mayúsculas el texto del footer */
+    text-transform: uppercase;
 }
 
 /* Media Queries para diseño responsivo */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Apila los elementos de la lista en vertical */
+        flex-direction: column;
         align-items: center;
     }
 
     nav li {
-        margin: 10px 0; /* Ajusta el espacio entre elementos de la lista */
+        margin: 10px 0;
     }
 
-    .productos .container {
-        flex-direction: column; /* Apila las cards de productos en vertical */
+    .planes .container {
+        flex-direction: column;
         align-items: center;
     }
 }
