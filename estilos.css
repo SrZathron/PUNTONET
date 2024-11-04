@@ -7,6 +7,7 @@
 
 body, html {
     font-family: 'Roboto', sans-serif;
+    color:white;
     width: 100%;
     overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }
@@ -19,7 +20,7 @@ body, html {
 
 /* Estilos del header */
 header {
-    background-color: #f0f0f0;
+    background-color:black;
     height: 80px;
 }
 
@@ -55,7 +56,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: whitesmoke;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -115,11 +116,13 @@ main {
 .plan h3 {
     margin-bottom: 10px;
     text-transform: uppercase;
+    color: black;
 }
 
 .plan p {
     margin: 5px 0;
     text-transform: uppercase;
+    color: black;
 }
 
 /* Estilos del footer */
