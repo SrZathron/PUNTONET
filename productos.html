@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRODUCTOS - PUNTONET</title>
+    <title>PUNTONET - Productos</title>
     <link rel="stylesheet" href="estilos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> <!-- Fuente Roboto Bold -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,6 +17,7 @@
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="productos.html">Productos</a></li>
+                    <li><a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </div>
@@ -26,26 +27,30 @@
     <main>
         <section class="planes">
             <h2>Nuestros Planes</h2>
-            <div class="container">
+            <div class="grid-container">
                 <div class="plan">
-                    <h3>Plan Bronce</h3>
+                    <h3>Plan 1</h3>
                     <p>10 MB</p>
-                    <p>$12.000</p>
+                    <p>$17.500</p>
+                    <button class="add-to-cart" data-name="Plan 1" data-price="17500">Agregar al Carrito</button>
                 </div>
                 <div class="plan">
-                    <h3>Plan Plata</h3>
+                    <h3>Plan 2</h3>
                     <p>15 MB</p>
-                    <p>$15.000</p>
+                    <p>$21.500</p>
+                    <button class="add-to-cart" data-name="Plan 2" data-price="21500">Agregar al Carrito</button>
                 </div>
                 <div class="plan">
-                    <h3>Plan Oro</h3>
+                    <h3>Plan 3</h3>
                     <p>20 MB</p>
-                    <p>$19.900</p>
+                    <p>$28.500</p>
+                    <button class="add-to-cart" data-name="Plan 3" data-price="28500">Agregar al Carrito</button>
                 </div>
                 <div class="plan">
-                    <h3>Plan Premium</h3>
+                    <h3>Plan 4</h3>
                     <p>30 MB</p>
-                    <p>$25.000</p>
+                    <p>$35.800</p>
+                    <button class="add-to-cart" data-name="Plan 4" data-price="35800">Agregar al Carrito</button>
                 </div>
             </div>
         </section>
@@ -54,8 +59,8 @@
     <footer>
         <div class="container">
             <p>&copy; 2024 PUNTONET. Todos los derechos reservados.</p>
-            <p>&copy; Pagina creada por Lionel Arredondo.</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

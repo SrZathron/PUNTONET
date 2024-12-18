@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PUNTONET - Contacto</title>
+    <title>PUNTONET - Carrito</title>
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -25,16 +25,12 @@
     </header>
 
     <main>
-        <h2>Contacto</h2>
-        <form action="https://formspree.io/f/xyzyevgg" method="POST">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+        <h2>Carrito de Compras</h2>
+        <div id="cart-items" class="container"></div>
+        <div class="total">
+            <h3>Total: $<span id="total-price">0</span></h3>
+            <button id="confirm-purchase">Confirmar Compra</button>
+        </div>
     </main>
 
     <footer>

@@ -1,15 +1,15 @@
-/* Estilos generales */
+/* Estilos Generales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body, html {
+body {
     font-family: 'Roboto', sans-serif;
-    color:white;
-    width: 100%;
-    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
 .container {
@@ -18,138 +18,238 @@ body, html {
     padding: 0 15px;
 }
 
-/* Estilos del header */
+/* Header */
 header {
-    background-color:black;
-    height: 80px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    height: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
 }
 
 .header-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
 }
 
-.logo-container {
-    margin-left: -30px;
+.logo {
+    width: 100px;
+    height: auto;
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    justify-content: center;
-    flex-grow: 1;
+    gap: 20px;
 }
 
-nav li {
-    margin: 0 15px;
-}
-
-nav a {
+nav li a {
     text-decoration: none;
-    color: whitesmoke;
+    color: #fff;
     font-weight: bold;
     text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
 }
 
-.logo {
-    width: 90px;
-    height: auto;
+nav li a:hover {
+    color: #1da851;
 }
 
-/* Estilos del main */
-main {
-    padding: 40px 0;
-}
-
+/* Banner */
 .banner {
+    background-color: #1da851;
+    color: white;
     text-align: center;
+    padding: 50px 20px;
 }
 
-.banner-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-/* Estilos para la sección de planes */
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #fff;
+    color: #1da851;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #1da851;
+    color: #fff;
+}
+
+/* Sección de Planes */
 .planes {
+    background-color: #fff;
     padding: 40px 0;
-    background-color: #f9f9f9;
     text-align: center;
 }
 
 .planes h2 {
-    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
 }
 
-.planes .container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+/* Configuración de Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
+    justify-items: center;
+    margin: 20px auto;
+    max-width: 1200px;
 }
 
 .plan {
-    background-color: #fff;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    width: 220px;
-    height: 250px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.plan:hover {
+    transform: scale(1.05);
 }
 
 .plan h3 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
-    text-transform: uppercase;
-    color: black;
+    color: #333;
 }
 
 .plan p {
-    margin: 5px 0;
-    text-transform: uppercase;
-    color: black;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 15px;
 }
 
-/* Estilos del footer */
+.plan button {
+    background-color: #1da851;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.plan button:hover {
+    background-color: #138a3c;
+}
+
+/* Carrito */
+#cart-items {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.total {
+    text-align: right;
+    margin-top: 20px;
+}
+
+#confirm-purchase {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#confirm-purchase:hover {
+    background-color: #1da851;
+}
+
+/* Formulario de Contacto */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #1da851;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: #138a3c;
+}
+
+/* Footer */
 footer {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
     padding: 20px 0;
     text-align: center;
 }
 
 footer p {
-    text-transform: uppercase;
+    margin: 0;
+    font-size: 0.9rem;
 }
 
-/* Media Queries para diseño responsivo */
+/* Responsivo */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
-        align-items: center;
+        gap: 10px;
     }
 
-    nav li {
-        margin: 10px 0;
-    }
-
-    .planes .container {
-        flex-direction: column;
-        align-items: center;
+    .plan {
+        width: 100%;
     }
 }
