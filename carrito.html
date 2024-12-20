@@ -14,7 +14,10 @@
                 <div class="logo-container">
                     <img src="Imagenes/Logo Puntonet.png" alt="Logo PUNTONET" class="logo">
                 </div>
-                <ul>
+                <button class="menu-toggle" id="menu-toggle">
+                    <span class="menu-icon"></span>
+                </button>
+                <ul class="menu" id="menu">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="productos.html">Productos</a></li>
                     <li><a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a></li>
@@ -26,11 +29,11 @@
 
     <main>
         <h2>Carrito de Compras</h2>
-        <div id="cart-items" class="container"></div>
+        <div id="cart-items"></div>
         <div class="total">
-            <h3>Total: $<span id="total-price">0</span></h3>
-            <button id="confirm-purchase">Confirmar Compra</button>
+            Total: $<span id="total-price">0.00</span>
         </div>
+        <button id="confirm-purchase">Confirmar Compra</button>
     </main>
 
     <footer>

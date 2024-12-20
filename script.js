@@ -1,13 +1,13 @@
-// Inicializar el carrito desde localStorage o como un array vacío
+// Persistencia del carrito con LocalStorage
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// Actualizar el contador del carrito
+// Actualizar el contador del carrito en el encabezado
 function updateCartCount() {
     const count = cart.reduce((total, item) => total + item.quantity, 0);
     document.getElementById('cart-count').innerText = count;
 }
 
-// Agregar un producto al carrito
+// Agregar productos al carrito (y manejar cantidades si ya existen)
 function addToCart(name, price) {
     const existingProduct = cart.find(item => item.name === name);
     if (existingProduct) {
@@ -15,32 +15,15 @@ function addToCart(name, price) {
     } else {
         cart.push({ name, price, quantity: 1 });
     }
-
-    // Guardar en localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
 }
 
-// Escuchar clics en los botones "Agregar al carrito"
-document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.add-to-cart');
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            const name = button.getAttribute('data-name');
-            const price = parseInt(button.getAttribute('data-price'));
-            addToCart(name, price);
-        });
-    });
-
-    // Actualizar el contador del carrito al cargar la página
-    updateCartCount();
-});
-
-// Función para renderizar el carrito en la página del carrito
+// Mostrar los productos del carrito en la página carrito.html
 function renderCart() {
     const cartItemsContainer = document.getElementById('cart-items');
     const totalPriceElement = document.getElementById('total-price');
-    cartItemsContainer.innerHTML = ''; // Limpiar contenido previo
+    cartItemsContainer.innerHTML = '';
 
     cart.forEach((item, index) => {
         const cartItem = document.createElement('div');
@@ -56,7 +39,7 @@ function renderCart() {
     totalPriceElement.innerText = total.toFixed(2);
 }
 
-// Función para eliminar un producto del carrito
+// Eliminar productos del carrito según el índice
 function removeFromCart(index) {
     cart.splice(index, 1);
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -64,7 +47,7 @@ function removeFromCart(index) {
     updateCartCount();
 }
 
-// Redirigir a WhatsApp al confirmar la compra
+// Conexión con WhatsApp al confirmar la compra
 function redirectToWhatsApp() {
     if (cart.length === 0) {
         alert('Tu carrito está vacío.');
@@ -74,17 +57,27 @@ function redirectToWhatsApp() {
     const selectedPlan = cart.map(item => `${item.name} (x${item.quantity})`).join(', ');
     const message = `Gracias por comunicarte con PUNTONET. Has seleccionado: ${selectedPlan}.`;
 
-    const phoneNumber = "+5492664957001"; // Reemplaza con tu número de WhatsApp
+    const phoneNumber = "+5492664957001"; // Número de WhatsApp de PUNTONET
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     window.location.href = whatsappLink;
 }
 
-// Vincular las funcionalidades al cargar la página del carrito
+// Manejar el menú desplegable para dispositivos móviles
 document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+
+    updateCartCount();
+
     if (document.getElementById('cart-items')) {
         renderCart();
     }
+
     if (document.getElementById('confirm-purchase')) {
         document.getElementById('confirm-purchase').addEventListener('click', redirectToWhatsApp);
     }
