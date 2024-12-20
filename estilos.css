@@ -229,7 +229,7 @@ nav li a:hover {
 }
 
 .total {
-    text-align: right;
+    text-align: center;
     margin-top: 20px;
 }
 
@@ -242,11 +242,14 @@ nav li a:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    display: block;
+    margin: 20px auto;
 }
 
 #confirm-purchase:hover {
     background-color: #1da851;
 }
+
 
 /* Formulario de Contacto */
 form {
