@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Plan 1",
+    "price": 17500,
+    "category": "10MB"
+  },
+  {
+    "id": 2,
+    "title": "Plan 2",
+    "price": 21500,
+    "category": "15MB"
+  },
+  {
+    "id": 3,
+    "title": "Plan 3",
+    "price": 28500,
+    "category": "20MB"
+  },
+  {
+    "id": 4,
+    "title": "Plan 4",
+    "price": 35800,
+    "category": "30MB"
+  }
+]

@@ -1,0 +1,70 @@
+import fs from "fs/promises";
+const useLocal = process.env.USE_LOCAL_DATA === "true";
+async function loadLocal() {
+  const buf = await fs.readFile(new URL("../data/products.json", import.meta.url), "utf-8");
+  return JSON.parse(buf);
+}
+import fs from "fs/promises";
+const useLocal = process.env.USE_LOCAL_DATA === "true";
+async function loadLocal() {
+  const buf = await fs.readFile(new URL("../data/products.json", import.meta.url), "utf-8");
+  return JSON.parse(buf);
+}
+import fs from "fs/promises";
+const useLocal = process.env.USE_LOCAL_DATA === "true";
+async function loadLocal() { const buf = await fs.readFile(new URL("../data/products.json", import.meta.url), "utf-8"); return JSON.parse(buf); }
+import fs from "fs/promises";
+const useLocal = process.env.USE_LOCAL_DATA === "true";
+async function loadLocal() { const buf = await fs.readFile(new URL("../data/products.json", import.meta.url), "utf-8"); return JSON.parse(buf); }
+import fs from "fs/promises";
+const useLocal = process.env.USE_LOCAL_DATA === "true";
+async function loadLocal() { const buf = await fs.readFile(new URL("../data/products.json", import.meta.url), "utf-8"); return JSON.parse(buf); }
+import fetch from 'node-fetch';
+
+const BASE = 'https://fakestoreapi.com';
+
+export async function listProducts() {
+    if(useLocal) return loadLocal();
+    if(useLocal) return loadLocal();
+  const res = await fetch(\`\${BASE}/products\`);
+    if(useLocal) return loadLocal();
+    if(useLocal) return loadLocal();
+  return await res.json();
+}
+
+export async function getProduct(id) {
+    if(useLocal) { const all = await loadLocal(); return all.find(p=>p.id==id); }
+    if(useLocal) { const all = await loadLocal(); return all.find(p=>p.id==id); }
+    if(useLocal) { const all = await loadLocal(); return all.find(p=>p.id==id); }
+  const res = await fetch(\`\${BASE}/products/\${id}\`);
+    if(useLocal) { const all = await loadLocal(); return all.find(p=>p.id==id); }
+    if(useLocal) { const all = await loadLocal(); return all.find(p=>p.id==id); }
+    if(useLocal) { const all = await loadLocal(); return all.find(p=>p.id==id); }
+  return await res.json();
+}
+
+export async function createProduct({ title, price, category }) {
+    if(useLocal) throw new Error("CREATE no soportado en datos locales");
+    if(useLocal) throw new Error("CREATE no soportado en datos locales");
+  const res = await fetch(\`\${BASE}/products\`, {
+    if(useLocal) throw new Error("CREATE no soportado en datos locales");
+    if(useLocal) throw new Error("CREATE no soportado en datos locales");
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    if(useLocal) throw new Error("CREATE no soportado en datos locales");
+    if(useLocal) throw new Error("CREATE no soportado en datos locales");
+    body: JSON.stringify({ title, price, category })
+    if(useLocal) throw new Error("CREATE no soportado en datos locales");
+    if(useLocal) throw new Error("CREATE no soportado en datos locales");
+  });
+  return await res.json();
+}
+
+export async function deleteProduct(id) {
+    if(useLocal) throw new Error("DELETE no soportado en datos locales");
+  const res = await fetch(\`\${BASE}/products/\${id}\`, {
+    if(useLocal) throw new Error("DELETE no soportado en datos locales");
+    method: 'DELETE'
+  });
+  return await res.json();
+}

@@ -1,0 +1,29 @@
+{
+  "name": "puntonet",
+  "version": "1.0.0",
+  "main": "cli.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cli": "node cli.js",
+    "start": "node cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SrZathron/PUNTONET.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SrZathron/PUNTONET/issues"
+  },
+  "homepage": "https://github.com/SrZathron/PUNTONET#readme",
+  "description": "",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "type": "module"
+}
